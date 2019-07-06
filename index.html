@@ -80,25 +80,25 @@
 			  complete: function(data){
 					alert("DATA Cooked FROM complete "+jsonObject.validation);
 					if(jsonObject.validation){
-						alert("From jsonObject.validation "+jsonObject.successurl);
+						//alert("From jsonObject.validation "+jsonObject.successurl);
 						//window.open("http://"+jsonObject.successurl+"/","_self");
 						read_value2();
 						read_value(name);
 					}
 					else
 					{
-						alert("Details does not match");
+						//alert("Details does not match");
 						read_value2();
 						document.getElementById("error-div").style.display = "block";
 					}
 				},
 			  success: function(data){
-				alert("DATA RESULT FROM SUCESS "+JSON.stringify(request.responseTextJSON.stringify(request.responseText)));
+				//alert("DATA RESULT FROM SUCESS "+JSON.stringify(request.responseTextJSON.stringify(request.responseText)));
 				jsonObject=JSON.parse(request.responseText);
 				read_value2();
 			  },
 			  error: function(data){
-				alert("DATA RESULT FROM ERROR "+JSON.stringify(request.responseText));
+				//alert("DATA RESULT FROM ERROR "+JSON.stringify(request.responseText));
 				jsonObject=JSON.parse(request.responseText);
 				read_value2();
 			  }
